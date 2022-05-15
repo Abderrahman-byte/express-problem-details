@@ -14,7 +14,7 @@ app.get('/1', (request, response) => {
 })
 
 app.get('*', (request, response) => {
-    throw new NotFoundError(request)
+    throw new NotFoundError()
 })
 
 app.use(ProblemDetails)
