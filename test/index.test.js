@@ -30,7 +30,6 @@ describe('Testing basic Problem details', () => {
 			const body = JSON.parse(response.body)
 
 			expect(response.statusCode).toBe(404)
-			expect(body.success).toBe(false)
 			expect(body.error.title).toMatch('not_found')
 			expect(body.error.status).toBe(404)
 			expect(body.error.instance).toMatch('/666')
@@ -38,4 +37,22 @@ describe('Testing basic Problem details', () => {
 			done()
 		})
 	}) 
+
+	test('Testing must errors', (done) => {
+		request(app).get('/2').then(response => {
+			const body = JSON.parse(response.body)
+
+			expect(body.error.title).toMatch('mutlipe_errors')
+			expect(body.error.status).toBe(400)
+			expect(body.error.subErrors).toBeInstanceOf(Array)
+			expect(body.error.subErrors[0].title).toMatch('error_1')
+			expect(body.error.subErrors[0].detail).toMatch('This is error 1')
+			expect(body.error.subErrors[1].title).toMatch('error_2')
+			expect(body.error.subErrors[1].detail).toMatch('This is error 2')
+			expect(body.error.subErrors[2].title).toMatch('error_3')
+			expect(body.error.subErrors[2].detail).toMatch('This is error 3')
+
+			done()
+		})
+	})
 })
