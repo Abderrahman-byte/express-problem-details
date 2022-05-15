@@ -1,0 +1,24 @@
+{
+  "name": "express-problem-details",
+  "version": "0.0.1",
+  "description": "Simple RFC-7807 implementation for ExpressJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MountainOlympius/express-problem-details.git"
+  },
+  "keywords": [
+    "RFC-7807",
+    "problem",
+    "details"
+  ],
+  "author": "Abderrahman-byte",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MountainOlympius/express-problem-details/issues"
+  },
+  "homepage": "https://github.com/MountainOlympius/express-problem-details#readme"
+}
