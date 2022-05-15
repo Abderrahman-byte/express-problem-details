@@ -4,7 +4,7 @@
         "lib": ["ES2021", "ESNext", "DOM"],
         "target": "ES5",
         "outDir": "dist",
-        "declaration": true
+        "declaration": true,
     },
 	"include": ["src"],
 	"exclude": ["node_modules"]
