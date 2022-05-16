@@ -30,7 +30,7 @@ describe('Testing basic Problem details', () => {
 			const body = JSON.parse(response.body)
 
 			expect(response.statusCode).toBe(404)
-			expect(body.error.title).toMatch('not_found')
+			expect(body.error.title).toMatch('Not Found')
 			expect(body.error.status).toBe(404)
 			expect(body.error.instance).toMatch('/666')
 
