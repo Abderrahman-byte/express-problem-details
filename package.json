@@ -1,6 +1,6 @@
 {
   "name": "express-problem-details",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Simple RFC-7807 implementation for ExpressJS",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
